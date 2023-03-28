@@ -1,0 +1,34 @@
+#home{
+  height: 100vh;
+  width: 100%;
+  background-image: url("/assets/photos/mog.png");
+  background-size:cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'PT Sans', sans-serif;
+  font-family: 'Shantell Sans', cursive;
+  padding: 20px;
+}
+input{
+  background: #000000;
+  border: 1px solid #F5F5F5;
+  border-radius:5px;
+  margin: 5px 0px;
+}
+label{
+  font-size: 20px;
+}
+.sub{
+background-color: white;
+color: #000000;
+}
+@media all and (max-width:540px){
+  .logo{
+    width: 90% !important;
+  }
+  label{
+    font-size: 18px !important;
+  }
+}

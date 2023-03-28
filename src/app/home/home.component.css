@@ -1,0 +1,96 @@
+*{
+  font-family: 'product sans';
+}
+.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #F5F5F5 !important;
+}
+.nav-link{
+  color: black !important;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.header{
+  background-image: url("/assets/photos/Frame 5 (2).png");
+  background-size: 100% 100%;
+  color:white;
+  height: 85vh;
+  display: flex;
+  padding-top:50px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.logo{
+  width:100px;
+}
+span{
+  font-size: 25px;
+}
+p{
+  font-size: 20px;
+}
+.footer{
+  background-image: url("/assets/photos/fotter.png");
+  height: 15vh;
+  display: flex;
+  align-items: center;
+}
+.icon{
+  width: 50px !important;
+}
+@media all and (min-width:570px){
+
+}
+@media all and (max-width:570px){
+  .brand{
+    width:170px !important;
+  }
+  .logo{
+    width:65px;
+  }
+  .header{
+    padding-top:90px;
+    height: auto;
+  }
+  .footer{
+    height: auto;
+  }
+  p{
+    font-size: 15px;
+  }
+  span{
+    font-size: 16px;
+  }
+.header{
+  height: 100vh !important;
+}
+.googleimg{
+  width:200px !important;
+}
+h1{
+  font-size: 20px;
+}
+}
+@media all and (min-width:770px){
+
+  .logo{
+    width:65px;
+  }
+  .footer{
+    height: auto;
+  }
+}
+@media all and (max-width:770px){
+
+  .logo{
+    width:65px;
+  }
+  .footer{
+    height: auto;
+  }
+}

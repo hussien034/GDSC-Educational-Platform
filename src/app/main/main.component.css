@@ -1,0 +1,26 @@
+#home{
+  width: 100%;
+  height: 100vh;
+  background-image: url(/assets/photos/Frame\ 2_page-0001\(1\).jpg);
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'PT Sans', sans-serif;
+  font-family: 'Shantell Sans', cursive;
+  
+}
+p{
+  font-size: 25px;
+}
+button{
+  width: 100px;
+height: 36px;
+font-size: 20px;
+text-align: center;
+border: 0;
+padding:5px;
+background: #D9D9D9;
+border-radius: 10px;
+}

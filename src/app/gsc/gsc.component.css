@@ -1,0 +1,222 @@
+*{
+  font-family: 'product sans';
+}
+.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #F5F5F5 !important;
+}
+.nav-link{
+  color: black !important;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.header{
+  background-color: #171717;
+  color:white;
+  padding-top:50px;
+  padding-bottom: 20px;
+  overflow: hidden;
+}
+.head{
+  margin-top: 120px;
+  margin-bottom: 50px;
+}
+iframe{
+  margin-left: 10px;
+}
+.go{
+  font-size: 35px;
+}
+.reg{
+  background-color: #0075FF;
+  color: white;
+  padding:8px 35px;
+  border: 0;
+  border-radius:10px;
+  margin-top: 5px;
+}
+.regiest{
+  text-decoration: none;
+  color: white;
+}
+.prize{
+  height: 210px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top:100px;
+  transition: all 0.3s;
+}
+.prize:hover{
+  transform: scale(1.06);
+}
+.prizeBox{
+background-color: #232323;
+height: 210px;
+padding: 20px;
+}
+.prizeImg{
+  position: absolute;
+  top:-100px !important;
+  width:80px !important;
+}
+.cont-icon{
+height: 380px !important;
+padding: 30px;
+width: 100%;
+background-color: #232323;
+border-radius: 25px;
+transition: all 0.3s;
+}
+.cont-icon:hover{
+  transform: scale(1.06);
+  cursor: pointer;
+}
+.cont-icon img{
+  width: 200px !important;
+}
+.cont-1{
+  border-top:25px solid #E5243B;
+}
+.cont-2{
+  border-top:25px solid #DDA83A;
+}
+.cont-3{
+  border-top:25px solid #4C9F38;
+}
+.cont-4{
+  border-top:25px solid #C5192D;
+}
+.cont-5{
+  border-top:25px solid #FF3A21;
+}
+.cont-6{
+  border-top:25px solid #26BDE2;
+}
+.cont-7{
+  border-top:25px solid #FCC30B;
+}
+.cont-8{
+  border-top:25px solid #A21942;
+}
+.cont-9{
+  border-top:25px solid #FD6925;
+}
+.cont-10{
+  border-top:25px solid #DD1367;
+}
+.cont-11{
+  border-top:25px solid #FD9D24;
+}
+.cont-12{
+  border-top:25px solid #BF8B2E;
+}
+.cont-13{
+  border-top:25px solid #3F7E44;
+}
+.cont-14{
+  border-top:25px solid #0A97D9;
+}
+.cont-15{
+  border-top:25px solid #56C02B;
+}
+.cont-16{
+  border-top:25px solid #00689D;
+}
+.cont-17{
+  border-top:25px solid #19486A;
+}
+.footer{
+  background-image: url("/assets/photos/fotter.png");
+  height: 15vh;
+  display: flex;
+  align-items: center;
+}
+.icon{
+  width: 50px !important;
+}
+/*------------------------Responsive---------------------*/
+@media all and (max-width:570px){
+  iframe{
+    height: 300px !important;
+  }
+  .head{
+    margin-top: 90px !important;
+  }
+  .brand{
+    width:170px !important;
+  }
+  .goals{
+    width:200px !important;
+  }
+  .prizeBox{
+    height: 200px;
+  }
+  .prizeImg{
+    position: absolute;
+    top:-40px !important;
+    width: 90px;
+  }
+  .footer{
+    height: auto;
+  }
+}
+@media all and (min-width:571px) {
+  .prizeBox{
+    height: 250px;
+  }
+  .prizeImg{
+    position: absolute;
+    top:-80px !important;
+    width: 90px;
+  }
+  .goals{
+    width: 80% !important;
+  }
+  .cont-icon{
+    height: 380px !important;
+    overflow: hidden;
+  }
+}
+
+@media all and (min-width:770px) {
+  .cont-icon{
+    height: 380px !important;
+    overflow: hidden;
+  }
+  .prizeImg{
+    position: absolute;
+    top:-80px !important;
+    width: 90px;
+  }
+}
+@media all and (max-width:1200px) {
+  .prizeBox{
+    height: 210px;
+    overflow: hidden;
+  }
+  .prizeImg{
+    position: absolute;
+    top:-50px !important;
+    width: 90px;
+  }
+  .cont-icon{
+    height: 500px !important;
+    overflow: hidden;
+  }
+}
+@media all and (max-width:570px) {
+  .goals{
+    width: 80% !important;
+  }
+  .cont-icon{
+    height: 380px !important;
+    overflow: hidden;
+  }
+}

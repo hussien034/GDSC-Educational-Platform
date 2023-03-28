@@ -1,0 +1,50 @@
+.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #F5F5F5 !important;
+}
+.nav-link{
+  color: black !important;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.header{
+  background-color: #171717;
+  color:white;
+  padding-top:100px;
+  padding-bottom: 20px;
+  overflow: hidden;
+}
+.cont-h{
+  background-image: url("/assets/photos/Frame 6.png");
+  background-size:cover;
+  padding:15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cont-pod{
+  background-color: white;
+  padding:10px;
+  border-radius: 20px;
+}
+.icon{
+  width: 50px !important;
+}
+.footer{
+  background-image: url("/assets/photos/fotter.png");
+  height: 15vh;
+  display: flex;
+  align-items: center;
+}
+@media all and (max-width:570px){
+  .brand{
+    width:170px !important;
+  }
+  .footer{
+    height: auto;
+  }
+}

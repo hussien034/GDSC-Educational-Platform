@@ -1,0 +1,90 @@
+.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #F5F5F5 !important;
+}
+.nav-link{
+  color: black !important;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.header{
+  background-color: #171717;
+  color:white;
+  padding-top:100px;
+  padding-bottom: 20px;
+  overflow: hidden;
+}
+.desc{
+  background-image: url("/assets/photos/Frame 6.png");
+  background-size:cover;
+}
+.courseDesc{
+  height: 400px;
+  background-color: black;
+  color: white;
+  border-radius: 40px;
+  transition: all 0.3s;
+}
+.courseDesc:hover{
+transform: scale(1.05);
+}
+.course-img{
+  border-radius: 40px;
+  height: 220px !important;
+}
+h2{
+  font-style: italic;
+  font-weight: 700;
+}
+h4{
+  padding-top:10px;
+}
+a{
+  text-decoration: none;
+}
+.footer{
+  background-image: url("/assets/photos/fotter.png");
+  height: 15vh;
+  display: flex;
+  align-items: center;
+}
+.icon{
+  width: 50px !important;
+}
+@media all and (max-width:570px){
+  .brand{
+    width:170px !important;
+  }
+  .course-img{
+    border-radius: 40px;
+    height: 180px !important;
+  }
+  .footer{
+    height: auto;
+  }
+  .courseDesc{
+    height: auto;
+  }
+
+}
+@media all and (min-width:770px) {
+  .courseDesc{
+    height:500px;
+    overflow: hidden;
+  }
+  .course-img{
+    height: 120px !important;
+  }
+}
+@media all and (min-width:1200px) {
+  .courseDesc{
+    height:400px;
+  }
+  .course-img{
+    height: 200px !important;
+  }
+}
