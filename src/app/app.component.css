@@ -1,0 +1,50 @@
+:host {
+  display: block;
+}
+
+.theme-toggle {
+  position: fixed;
+  z-index: 1100;
+  right: 22px;
+  bottom: 22px;
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 16px;
+  border: 1px solid #d8e0ec;
+  border-radius: 999px;
+  color: #26344d;
+  background: #fff;
+  box-shadow: 0 6px 22px rgba(20, 36, 65, .18);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .18s ease, background-color .18s ease, color .18s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid rgba(26, 115, 232, .55);
+  outline-offset: 3px;
+}
+
+:host-context(html[data-theme="dark"]) .theme-toggle {
+  border-color: #3b4b65;
+  color: #f5c451;
+  background: #1a263a;
+}
+
+@media (max-width: 479.98px) {
+  .theme-toggle {
+    right: 14px;
+    bottom: 14px;
+    min-height: 42px;
+    padding: 0 13px;
+    font-size: 12px;
+  }
+}

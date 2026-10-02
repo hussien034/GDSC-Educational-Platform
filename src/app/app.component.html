@@ -1,1 +1,11 @@
 <router-outlet></router-outlet>
+<button
+  class="theme-toggle"
+  type="button"
+  (click)="toggleTheme()"
+  [attr.aria-label]="themeService.isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'"
+  [attr.aria-pressed]="themeService.isDarkMode"
+  [title]="themeService.isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'">
+  <i class="fa-solid" [ngClass]="themeService.isDarkMode ? 'fa-sun' : 'fa-moon'" aria-hidden="true"></i>
+  <span>{{ themeService.isDarkMode ? 'Light mode' : 'Dark mode' }}</span>
+</button>
