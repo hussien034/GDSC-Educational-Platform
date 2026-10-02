@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-home',
@@ -9,17 +10,11 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   isLgoin:boolean=false;
-  constructor(private _Router:Router) {
-    let token=localStorage.getItem('token');
-    if(token){
-      this.isLgoin=true
-    }
-    else{
-      this.isLgoin=false
-    }
-   }
+  constructor(private _Router:Router, private authService: AuthService) {
+    this.isLgoin = this.authService.isAuthenticated();
+  }
   logout(){
-    localStorage.removeItem('token');
+    this.authService.logout();
     this._Router.navigateByUrl('/main')
   }
 

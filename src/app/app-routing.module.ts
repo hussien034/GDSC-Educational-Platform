@@ -13,7 +13,8 @@ const routes: Routes = [
   {path:"main", component:MainComponent},
   {path:"register",component:RegisterComponent},
   {path:"login" ,component:LoginComponent},
-  {path:"boodcasts",component:BoodcastsComponent},
+  {path:"home/home",redirectTo:"home",pathMatch:"full"},
+  {path:"boodcasts",component:BoodcastsComponent ,canActivate:[AuthGuard]},
   {path:"home",component:HomeComponent ,canActivate:[AuthGuard]},
   {path:"gsc",component:GscComponent ,canActivate:[AuthGuard]},
   {path:"courses",component:CoursesComponent ,canActivate:[AuthGuard]}

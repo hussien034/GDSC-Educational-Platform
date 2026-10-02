@@ -1,28 +1,56 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 m-auto">
-        <h1 class="text-center">Login</h1>
-        <form [formGroup]="loginData" (ngSubmit)="sendData()">
-          <label class="mt-1">Email :</label>
-          <input class="form-control mt-1" formControlName='email'>
-          <div class="alert alert-danger mt-2" *ngIf="loginData.get('email')?.invalid && loginData.get('email')?.touched" >
-            <p *ngIf="loginData.get('email')?.errors?.['required']">email is required</p>
-          </div>
-          <label class="mt-3">Password :</label>
-          <input class="form-control mt-1" formControlName='password' type="password">
-          <div class="alert alert-danger mt-2" *ngIf="loginData.get('password')?.invalid && loginData.get('password')?.touched">
-            <p *ngIf="loginData.get('password')?.errors?.['required']">passowrd is required</p>
-          </div>
-          <button [disabled]="loginData.invalid" type="submit" class="btn mt-3 mb-4 form-control sub">Submit</button>
-        </form>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6 m-auto d-flex justify-content-center">
-      <img class="logo w-25" src="/assets/photos/Frame 3 (3).png">
+<main class="auth-page">
+  <section class="auth-shell" aria-labelledby="login-title">
+    <aside class="auth-aside">
+      <a class="auth-brand" routerLink="/main" aria-label="GDSC Cairo University home">
+        <img src="assets/photos/Vector.png" alt="">
+        <span>GDSC Cairo University</span>
+      </a>
+      <div class="aside-message">
+        <p class="aside-label">LEARN · SHARE · BUILD</p>
+        <h1>Your next idea starts with what you learn.</h1>
+        <p>Pick up where you left off and keep growing with your community.</p>
+      </div>
+      <p class="aside-caption">A peer-to-peer learning community at Cairo University.</p>
+    </aside>
 
-    </div>
-  </div>
+    <div class="auth-content">
+      <p class="form-kicker">WELCOME BACK</p>
+      <h2 id="login-title">Log in to your account</h2>
+      <p class="form-description">Enter your details to continue learning.</p>
 
-</div>
+      <p class="auth-feedback" role="alert" *ngIf="feedbackMessage">{{ feedbackMessage }}</p>
+
+      <form [formGroup]="loginData" (ngSubmit)="sendData()">
+        <div class="form-field">
+          <label for="login-email">Email address</label>
+          <input id="login-email" class="form-control" formControlName="email"
+            type="email" autocomplete="email" placeholder="you@example.com"
+            [attr.aria-invalid]="loginData.get('email')?.invalid && loginData.get('email')?.touched">
+          <div class="field-error" role="alert"
+            *ngIf="loginData.get('email')?.invalid && loginData.get('email')?.touched">
+            <p *ngIf="loginData.get('email')?.errors?.['required']">Enter your email address.</p>
+            <p *ngIf="loginData.get('email')?.errors?.['email']">Enter a valid email address.</p>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="login-password">Password</label>
+          <input id="login-password" class="form-control" formControlName="password"
+            type="password" autocomplete="current-password" placeholder="Enter your password"
+            [attr.aria-invalid]="loginData.get('password')?.invalid && loginData.get('password')?.touched">
+          <div class="field-error" role="alert"
+            *ngIf="loginData.get('password')?.invalid && loginData.get('password')?.touched">
+            <p *ngIf="loginData.get('password')?.errors?.['required']">Enter your password.</p>
+          </div>
+        </div>
+
+        <button [disabled]="loginData.invalid || isSubmitting" type="submit" class="submit-button">
+          {{ isSubmitting ? 'Signing in...' : 'Log in' }}
+          <i *ngIf="!isSubmitting" class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <p class="auth-switch">New to the community? <a routerLink="/register">Create an account</a></p>
+    </div>
+  </section>
+</main>

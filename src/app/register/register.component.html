@@ -1,44 +1,82 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 m-auto">
-        <h1 class="text-center">Create Account</h1>
-        <form [formGroup]="registaration" (ngSubmit)="subRegister()">
-          <label class="mt-3">First Name :</label>
-          <input class="form-control mt-1"  formControlName='first_name'>
-          <div class=" alert alert-danger mt-2" *ngIf="registaration.get('first_name')?.invalid&&registaration.get('first_name')?.touched">
-            <p *ngIf="registaration.get('first_name')?.errors?.['required']">first name is required</p>
-            <p *ngIf="registaration.get('first_name')?.errors?.['minlength']">first name min length 3</p>
-            <p *ngIf="registaration.get('first_name')?.errors?.['maxLength']">first name max lenght 9</p>
-          </div>
-          <label class="mt-3">Last Name :</label>
-          <input class="form-control mt-1"  formControlName='last_name' type="text">
-          <div class="alert alert-danger mt-2"  *ngIf="registaration.get('last_name')?.invalid && registaration.get('last_name')?.touched">
-            <p *ngIf="registaration.get('last_name')?.errors?.['required']">last name is required</p>
-          <p *ngIf="registaration.get('last_name')?.errors?.['minlength']">last name min length 3</p>
-          <p *ngIf="registaration.get('last_name')?.errors?.['maxlenght']">last name max lenght 9</p>
-          </div>
-          <label class="mt-3">Faculty  :</label>
-          <input class="form-control mt-1">
-          <label class="mt-3">Email :</label>
-          <input class="form-control mt-1" formControlName='email'>
-          <div class="alert alert-danger mt-2" *ngIf="registaration.get('email')?.invalid && registaration.get('email')?.touched" >
-            <p *ngIf="registaration.get('email')?.errors?.['required']">email is required</p>
-          </div>
-          <label class="mt-3">Password :</label>
-          <input class="form-control mt-1" type="password" formControlName='password'>
-          <div class="alert alert-danger mt-2" *ngIf="registaration.get('password')?.invalid && registaration.get('password')?.touched">
-            <p *ngIf="registaration.get('password')?.errors?.['required']">passowrd is required</p>
-          </div>
-          <button [disabled]="registaration.invalid" type="submit" class="btn mt-3 form-control sub">Submit</button>
-        </form>
+<main class="auth-page">
+  <section class="auth-shell register-shell" aria-labelledby="register-title">
+    <aside class="auth-aside">
+      <a class="auth-brand" routerLink="/main" aria-label="GDSC Cairo University home">
+        <img src="assets/photos/Vector.png" alt="">
+        <span>GDSC Cairo University</span>
+      </a>
+      <div class="aside-message">
+        <p class="aside-label">LEARN · SHARE · BUILD</p>
+        <h1>Make room for what you could become.</h1>
+        <p>Learn with peers, explore new ideas, and create something that matters.</p>
       </div>
-    </div>
-     <div class="row">
-    <div class="col-md-6 m-auto d-flex justify-content-center">
-    <img class="logo w-50 mt-5" src="/assets/photos/Frame 3 (3).png">
-    </div>
-</div>
-  </div>
-  </div>
+      <p class="aside-caption">A peer-to-peer learning community at Cairo University.</p>
+    </aside>
 
+    <div class="auth-content">
+      <p class="form-kicker">GET STARTED</p>
+      <h2 id="register-title">Create your account</h2>
+      <p class="form-description">Join the GDSC Cairo University learning community.</p>
+
+      <p class="auth-feedback" role="alert" *ngIf="feedbackMessage">{{ feedbackMessage }}</p>
+
+      <form [formGroup]="registaration" (ngSubmit)="subRegister()">
+        <div class="form-field">
+          <label for="register-first-name">First name</label>
+          <input id="register-first-name" class="form-control" formControlName="first_name"
+            type="text" autocomplete="given-name" placeholder="Your first name"
+            [attr.aria-invalid]="registaration.get('first_name')?.invalid && registaration.get('first_name')?.touched">
+          <div class="field-error" role="alert"
+            *ngIf="registaration.get('first_name')?.invalid && registaration.get('first_name')?.touched">
+            <p *ngIf="registaration.get('first_name')?.errors?.['required']">Enter your first name.</p>
+            <p *ngIf="registaration.get('first_name')?.errors?.['minlength']">Use at least 3 characters.</p>
+            <p *ngIf="registaration.get('first_name')?.errors?.['maxlength']">Use no more than 12 characters.</p>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="register-last-name">Last name</label>
+          <input id="register-last-name" class="form-control" formControlName="last_name"
+            type="text" autocomplete="family-name" placeholder="Your last name"
+            [attr.aria-invalid]="registaration.get('last_name')?.invalid && registaration.get('last_name')?.touched">
+          <div class="field-error" role="alert"
+            *ngIf="registaration.get('last_name')?.invalid && registaration.get('last_name')?.touched">
+            <p *ngIf="registaration.get('last_name')?.errors?.['required']">Enter your last name.</p>
+            <p *ngIf="registaration.get('last_name')?.errors?.['minlength']">Use at least 3 characters.</p>
+            <p *ngIf="registaration.get('last_name')?.errors?.['maxlength']">Use no more than 12 characters.</p>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="register-email">Email address</label>
+          <input id="register-email" class="form-control" formControlName="email"
+            type="email" autocomplete="email" placeholder="you@example.com"
+            [attr.aria-invalid]="registaration.get('email')?.invalid && registaration.get('email')?.touched">
+          <div class="field-error" role="alert"
+            *ngIf="registaration.get('email')?.invalid && registaration.get('email')?.touched">
+            <p *ngIf="registaration.get('email')?.errors?.['required']">Enter your email address.</p>
+            <p *ngIf="registaration.get('email')?.errors?.['email']">Enter a valid email address.</p>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="register-password">Password</label>
+          <input id="register-password" class="form-control" formControlName="password"
+            type="password" autocomplete="new-password" placeholder="Create a password"
+            [attr.aria-invalid]="registaration.get('password')?.invalid && registaration.get('password')?.touched">
+          <div class="field-error" role="alert"
+            *ngIf="registaration.get('password')?.invalid && registaration.get('password')?.touched">
+            <p *ngIf="registaration.get('password')?.errors?.['required']">Create a password.</p>
+          </div>
+        </div>
+
+        <button [disabled]="registaration.invalid || isSubmitting" type="submit" class="submit-button">
+          {{ isSubmitting ? 'Saving account...' : 'Create account' }}
+          <i *ngIf="!isSubmitting" class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <p class="auth-switch">Already have an account? <a routerLink="/login">Log in</a></p>
+    </div>
+  </section>
+</main>

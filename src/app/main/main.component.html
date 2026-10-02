@@ -1,20 +1,116 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 m-auto  d-flex">
-        <img src="assets/photos/Frame 2_page-0001.jpg" class="m-auto w-50">
-      </div>
-      <div class="row">
-        <div class="col-md-6 text-center m-auto mt-2">
-        <p>Welcome to Google Developer Student Clubs <br> Cairo University Educational Platform </p>
-      </div>
-      <div class="row m-auto">
-        <div class="col-md-12  text-center ">
-          <button class="m-3" routerLink="/register">Register</button>
-          <button class="m-3" routerLink="/login">Login</button>
+<div class="landing-page">
+  <nav class="navbar navbar-expand-lg site-nav" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand" routerLink="/main" aria-label="GDSC Cairo University home">
+        <img src="assets/photos/gdsc-cairo-logo-transparent.png" alt="GDSC Cairo University">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#mainNavigation" aria-controls="mainNavigation"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavigation">
+        <div class="navbar-nav ms-auto align-items-lg-center">
+          <a class="nav-link" routerLink="/courses">Courses</a>
+          <a class="nav-link" routerLink="/boodcasts">Podcasts</a>
+          <a class="nav-link" routerLink="/gsc">Solution Challenge</a>
+          <a class="nav-link login-link" routerLink="/login">Log in</a>
+          <a class="nav-link nav-cta" routerLink="/register">Get started</a>
         </div>
       </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> GDSC Cairo University</p>
+        <h1>Learn together.<br><span>Build what's next.</span></h1>
+        <p class="hero-description">
+          Find your next skill, learn from your peers, and turn what you learn
+          into solutions for your community.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-button" routerLink="/register">
+            Create your account <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+          <a class="text-link" routerLink="/login">Already a member? Log in</a>
+        </div>
+        <p class="hero-note">A peer-to-peer learning community at Cairo University.</p>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="art-center">
+          <img src="assets/photos/Vector.png" alt="">
+        </div>
+        <div class="art-card art-card-top">
+          <span class="art-icon code-icon"><i class="fa-solid fa-code"></i></span>
+          <span>Learn by doing</span>
+        </div>
+        <div class="art-card art-card-bottom">
+          <span class="art-icon people-icon"><i class="fa-solid fa-people-group"></i></span>
+          <span>Grow together</span>
+        </div>
+        <span class="art-dot dot-blue"></span>
+        <span class="art-dot dot-yellow"></span>
+        <span class="art-dot dot-green"></span>
+      </div>
+    </section>
+
+    <section class="pathways">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Your next step starts here</p>
+          <h2>Explore the platform</h2>
+          <p>Choose a path that matches your curiosity. You can always try another.</p>
+        </div>
+        <div class="pathway-grid">
+          <a class="pathway-card" routerLink="/courses">
+            <span class="pathway-icon courses-icon"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></span>
+            <span class="pathway-title">Courses</span>
+            <span class="pathway-description">Build practical skills at your own pace.</span>
+            <span class="card-link">Browse courses <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </a>
+          <a class="pathway-card" routerLink="/boodcasts">
+            <span class="pathway-icon podcasts-icon"><i class="fa-solid fa-podcast" aria-hidden="true"></i></span>
+            <span class="pathway-title">Podcasts</span>
+            <span class="pathway-description">Discover fresh perspectives from the community.</span>
+            <span class="card-link">Listen and learn <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </a>
+          <a class="pathway-card" routerLink="/gsc">
+            <span class="pathway-icon challenge-icon"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i></span>
+            <span class="pathway-title">Solution Challenge</span>
+            <span class="pathway-description">Turn ideas into technology for good.</span>
+            <span class="card-link">Explore the challenge <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>Made for curious minds at Cairo University.</p>
+      <div class="social-links" aria-label="GDSC Cairo University social links">
+        <a href="https://gdsc.community.dev/cairo-university-faculty-of-computers-and-artificial-intelligence/"
+          target="_blank" rel="noopener noreferrer" aria-label="GDSC Community">
+          <i class="fa-solid fa-globe" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/dsccairo/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.facebook.com/GDSCCUFCAI" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/gdsccufcai/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:cairodsc@gmail.com" aria-label="Email GDSC Cairo University">
+          <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+        </a>
       </div>
     </div>
-  </div>
-  </div>
+  </footer>
+</div>
